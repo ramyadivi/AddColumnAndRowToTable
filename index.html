@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="exam.css">
+    <script src="exam.js"></script>
+  </head>
+
+  <body>
+    <h1>Column master</h1>
+    <button type=button onclick="fnGetPage()">Add Column</button>
+    <button type=button onclick="fnDeleteData()">Remove Column</button>
+    <br/>
+    <br/>
+    <table id="table1">
+        <tr>
+            <th></th>
+            <th>Column name</th>
+            <th>Column type</th>
+            <th>Editable</th>
+        </tr>
+        <div class="pop" id="page">
+            <button type=button class="close" onclick="fnClose()">&times</button>
+            <center>
+            <form>
+                Column name:
+                <input type="text" id="cname"/>
+                <br/>
+                <br/>Column type:
+                <select id="ctype">
+                    <option value="number">Number</option>
+                    <option value="string">string</option>
+                    <option value="date">date</option>
+                    <option value="boolean">boolean</option>
+                </select>
+                <br/>
+                <br/>Editable:
+                <select id="edit">
+                    <option value="yes">yes</option>
+                    <option value="no">No</option>
+                </select>
+                <br/>
+                <br/>
+                <button type=button onclick="fnGetData()">Add Column</button>
+                <button type=button onclick="fnClose()">Close without adding</button>
+            </form>
+            </center>
+        </div>
+    </table>
+    <h1>Result Data Grid</h1>
+    <button type=button >Add Row</button>
+    <button type=button >Remove Row</button>
+    <button type=button>Export to JSON</button>
+    <br/>
+    <br/>
+   
+  </body>
+
+</html>
